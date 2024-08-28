@@ -62,11 +62,6 @@ html {
     z-index: 100;
 }
 
-@media (max-width: 768px) {
-    .nav-responsive {
-        display: block;
-    }
-
     .contenedor-header header nav ul {
         display: none;
         flex-direction: column;
@@ -144,11 +139,6 @@ html {
 .inicio .contenido-banner .redes a:hover {
     background-color: #2bbec4;
 }
-
-@media (max-width: 768px) {
-    .inicio {
-        padding: 0 20px;
-    }
 
     .inicio .contenido-banner {
         width: 100%;
@@ -279,39 +269,6 @@ gap:15px;
     z-index: 10;
 }
 
-@media (max-width: 768px) {
-    .sobremi {
-        padding: 30px 10px;
-    }
-
-    .sobremi h2 {
-        font-size: 32px;
-    }
-
-    .sobremi .contenido-seccion p {
-        font-size: 16px;
-    }
-
-    .sobremi .fila {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .sobremi .fila .col {
-        min-width: auto;
-    }
-
-    .sobremi .fila .col .contenedor-intereses .intereses {
-        width: 100px;
-        height: 100px;
-        font-size: 24px;
-    }
-
-    .sobremi .fila .col .contenedor-intereses .intereses i {
-        font-size: 30px;
-    }
-}
-
 .contenedor-intereses {
     display: flex;
     flex-wrap: wrap;
@@ -346,23 +303,6 @@ gap:15px;
 .intereses:hover {
     background: #21a7ac;
 }
-
-@media (max-width: 768px) {
-    .intereses {
-        width: 100px;
-        height: 100px;
-        padding: 15px;
-    }
-
-    .intereses i {
-        font-size: 30px;
-    }
-
-    .intereses span {
-        font-size: 14px;
-    }
-}
-
 
 .estudios {
     background-color: #2fd1d6;
@@ -426,23 +366,6 @@ gap:15px;
     display: block;
     color: #2bbec4;
     margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-    .estudios .fila {
-        flex-direction: column;
-    }
-
-    .estudios .fila .col {
-        width: 100%;
-        padding: 0;
-    }
-
-    .estudios .item {
-        width: 100%;
-        margin: 0 0 20px 0;
-    }
-
 }
 
 .redes {
@@ -709,62 +632,88 @@ footer .arriba:hover {
     background-color: #21a7ac; 
 }
 
-@media  screen and (max-width:980px) {
-    nav{
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; 
+    }
+
+    .elemento {
+        margin: 5px 0; 
+    }
+
+    .boton {
+        width: 100%;
+        padding: 10px; 
+    }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+    }
+
+    .elemento {
+        width: calc(50% - 10px); 
+        margin: 5px;
+    }
+
+    .imagen {
+        width: 100%;
+        height: auto; 
+    }
+}
+@media screen and (max-width: 980px) {
+    nav {
         display: block;
     }
-    nav.reaponsive{
-        display: block;
+
+    nav.responsive {
         position: absolute;
         right: 0;
-        top:75px;
+        top: 75px;
         background-color: #2bbec4;
         width: 180px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    nav.responsive ul{
-        display: block;
+
+    nav.responsive ul {
+        list-style: none;
         margin: 0;
         padding: 0;
-        list-style: none;
     }
-    nav.responsive ul li:last-child {
-        border-bottom: none;
+
+    nav.responsive ul li {
         padding: 10px 0;
     }
 }
+@media screen and (max-width: 700px) {
+    .sobremi .fila,
+    .estudios .fila,
+    .contacto .fila {
+        display: block;
+        width: 100%;
+    }
 
-@media screen and (max-width:700px) {
-    .sobremi .fila .col{
-        display:block;
+    .sobremi .fila .col,
+    .estudios .fila .col {
         width: 100%;
         margin: 0;
     }
-    .estuidos .fila{
+
+    .biblioteca .galeria {
         display: block;
-    }
-    .estudios .fila .col{
         width: 100%;
-        margin-left: 0;
     }
-    .estudios .fila .derecha{
-        margin-left:20px;
-    }
-    .biblioteca .galeria{
-    display: block;
-    width: 100%;
-    }
-    .biblioteca .galeria .proyecto{
+
+    .biblioteca .galeria .proyecto {
         max-width: 100%;
         margin: 10px 0;
     }
-    .biblioteca .galeria .proyecto img{
+
+    .biblioteca .galeria .proyecto img {
         width: 100%;
-    }
-    .contacto .fila{
-        display: block;
-    }
-    .contacto .fila .col{
-        width: 100%;
+        height: auto; 
     }
 }
+
